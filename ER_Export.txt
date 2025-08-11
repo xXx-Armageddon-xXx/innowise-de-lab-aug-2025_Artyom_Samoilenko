@@ -1,0 +1,43 @@
+CREATE TABLE "Customers" (
+  "CustomerID" INTEGER,
+  "FirstName" VARCHAR(50),
+  "LastName" VARCHAR(50),
+  "Phone" VARCHAR(15),
+  PRIMARY KEY ("CustomerID")
+);
+
+CREATE TABLE "Reservations" (
+  "CustomerID" INTEGER,
+  "ReservationID" INTEGER,
+  "ReservationDate" DATE,
+  "ReservationTime" TIME,
+  "GuestsCount" INTEGER,
+  PRIMARY KEY ("ReservationID"),
+  CONSTRAINT "FK_Reservations_ReservationID"
+    FOREIGN KEY ("ReservationID")
+      REFERENCES "Customers"("FirstName")
+);
+
+CREATE TABLE "Guests" (
+  "ReservationID" INTEGER,
+  "GuestID" INTEGER,
+  "GuestName" VARCHAR(50),
+  "Phone" <type>,
+  PRIMARY KEY ("GuestID"),
+  CONSTRAINT "FK_Guests_GuestID"
+    FOREIGN KEY ("GuestID")
+      REFERENCES "Reservations"("ReservationID")
+);
+
+CREATE TABLE "Reservation_Tables" (
+  "TableID" INTEGER,
+  "ReservationID" INTEGER
+);
+
+CREATE TABLE "Tables" (
+  "TableID" INTEGER,
+  "IsActive" BOOLEAN,
+  "Capacity" INTEGER,
+  PRIMARY KEY ("TableID")
+);
+
