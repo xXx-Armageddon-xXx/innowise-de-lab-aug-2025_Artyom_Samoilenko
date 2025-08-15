@@ -1,1 +1,3 @@
 # innowise-de-lab-aug-2025_Artyom_Samoilenko
+
+Создана таблица из приложения A
