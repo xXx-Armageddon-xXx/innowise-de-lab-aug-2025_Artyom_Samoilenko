@@ -46,12 +46,8 @@ RETURNING projectid INTO NEW_PROJECT_ID;  -- Сохраняем ID нового 
 -- 2. Назначаем двух конкретных сотрудников на проект
 INSERT INTO EmployeeProjects (employeeID, projectid, hoursworked)
 VALUES 
-    ((SELECT employeeID FROM Employees WHERE lastname = 'Smith' LIMIT 1), 
+    ((SELECT employeeID FROM employeeprojects WHERE hoursworked <= 120 LIMIT 2), 
      NEW_PROJECT_ID, 
-     40),
-    
-    ((SELECT employeeID FROM Employees WHERE lastname = 'Davis' LIMIT 1), 
-     NEW_PROJECT_ID, 
-     35);
-
+     150)
+     
 COMMIT;

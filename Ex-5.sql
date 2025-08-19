@@ -49,4 +49,4 @@ WHERE
 -- Пункт 4
 -- Выбрать данные из вашего представления IT_Department_View
 
-SELECT * from OM IT_Department_View
+SELECT * from IT_Department_View
