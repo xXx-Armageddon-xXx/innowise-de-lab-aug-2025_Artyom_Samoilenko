@@ -20,4 +20,3 @@ ALTER TABLE employees ADD CONSTRAINT UQ_Email UNIQUE (email);
 
 -- Пункт 4. Переименовать столбец Location в таблице Departments в OfficeLocation.
 ALTER TABLE Departments RENAME COLUMN location TO OfficeLocation;
-

@@ -50,3 +50,9 @@ WHERE
 -- Выбрать данные из вашего представления IT_Department_View
 
 SELECT * from IT_Department_View
+
+
+update projects
+set projectid = 3
+where projectid = 6
+

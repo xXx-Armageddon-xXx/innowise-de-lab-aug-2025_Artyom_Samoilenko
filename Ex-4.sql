@@ -36,8 +36,6 @@ WHERE NOT EXISTS (
 -- сотрудников с определенным количеством HoursWorked в
 -- EmployeeProjects, и все это в одном блоке BEGIN/COMMIT.
 
-BEGIN;
-
 -- 1. Вставляем новый проект
 INSERT INTO Projects (ProjectName, StartDate, EndDate, Budget)
 VALUES ('New project', '2025-08-18', '2025-09-25', 100000)
@@ -49,5 +47,4 @@ VALUES
     ((SELECT employeeID FROM employeeprojects WHERE hoursworked <= 120 LIMIT 2), 
      NEW_PROJECT_ID, 
      150)
-     
-COMMIT;
+

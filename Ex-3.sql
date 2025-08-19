@@ -13,7 +13,13 @@ GRANT SELECT ON employees TO noob;
 GRANT noob TO hr_user;
 
 -- Пункт 3. Тест: В новой сессии подключиться как hr_user и попытаться выполнить SELECT * FROM Employees;. (Должно сработать).
+
+SELECT * FROM employees
+
 -- Пункт 4. Как hr_user, попытаться выполнить INSERT нового сотрудника в Employees. (Должно завершиться неудачей).
+
+INSERT INTO employees (employeeid, firstname, lastname, department, salary, email)
+VALUES (4, 'Diana', 'Prince', 'IT', 80000.00, 'randomemail@gmail.com')
 
 -- Пункт 5. Как пользователь-администратор, предоставить hr_user права INSERT и UPDATE на таблицу Employees.
 
@@ -23,3 +29,6 @@ REVOKE noob FROM hr_user;
 GRANT pro TO hr_user;
 
 -- Пункт 6. Тест: Как hr_user, попробовать выполнить INSERT и UPDATE сотрудника. (Теперь должно сработать)
+
+INSERT INTO employees (employeeid, firstname, lastname, department, salary, email)
+VALUES (4, 'Diana', 'Prince', 'IT', 80000.00, 'randomemail@gmail.com')
