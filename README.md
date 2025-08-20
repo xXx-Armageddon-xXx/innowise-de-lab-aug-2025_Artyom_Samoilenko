@@ -64,4 +64,50 @@
 <img width="790" height="239" alt="изображение" src="https://github.com/user-attachments/assets/9c6ffa43-dc74-42ff-9660-c9f0f15dcc21" />
 
 Задание 4
+  1. Увеличить Salary всех сотрудников в отделе 'HR' на 10%.
+
+<img width="908" height="223" alt="изображение" src="https://github.com/user-attachments/assets/67bfc0a8-9fc4-463f-9245-b0522f16bdfc" />
+
+  2. Обновить Department любого сотрудника с Salary выше 70000.00 на 'Senior IT'.
+
+<img width="899" height="190" alt="изображение" src="https://github.com/user-attachments/assets/f1427ace-f09e-4467-803e-747652581ae4" />
+
+  3. Удалить всех сотрудников, которые не назначены ни на один проект в таблице EmployeeProjects. Подсказка: Используйте подзапрос NOT EXISTS или LEFT JOIN
+  
+  <img width="901" height="123" alt="изображение" src="https://github.com/user-attachments/assets/e6b80c65-c1db-4900-a9be-10f6a87bfc2e" />
+
+  4. Вставить новый проект и назначить на него двух существующих сотрудников с определенным количеством HoursWorked в EmployeeProjects, и все это в одном блоке BEGIN/COMMIT.
+(Это задание я так по итогу и не смог сделать)
+
+Задание 5
+1. Функция: Создать функцию PostgreSQL с именем CalculateAnnualBonus, которая принимает employee_id и Salary в качестве входных данных и возвращает рассчитанную
+сумму бонуса (10 % от Salary) для этого сотрудника. Используйте PL/pgSQL для тела функции.
+
+<img width="368" height="54" alt="изображение" src="https://github.com/user-attachments/assets/a0089083-df62-425d-b74f-549f92f102e9" />
+
+2. Использовать эту функцию в операторе SELECT, чтобы увидеть потенциальный бонус для каждого сотрудника.
+
+<img width="699" height="144" alt="изображение" src="https://github.com/user-attachments/assets/91db4f9e-f81e-4769-a74c-fa3c480a59c6" />
+
+3. Представление (View): Создать представление с именем IT_Department_View, которое показывает EmployeeID, FirstName, LastName и Salary только для сотрудников из отдела 'IT'.
+
+<img width="502" height="57" alt="изображение" src="https://github.com/user-attachments/assets/a5dd1082-a745-4d5d-baaf-e146d229aa94" />
+
+4. Выбрать данные из вашего представления IT_Department_View.
+
+<img width="551" height="104" alt="изображение" src="https://github.com/user-attachments/assets/9b6a5cde-9015-42cc-ab3b-0e04561c378f" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
