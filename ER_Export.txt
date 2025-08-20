@@ -10,34 +10,36 @@ CREATE TABLE "Reservations" (
   "CustomerID" INTEGER,
   "ReservationID" INTEGER,
   "ReservationDate" DATE,
-  "ReservationTime" TIME,
-  "GuestsCount" INTEGER,
+  "ReservationStart" TIME,
+  "ReservationEnd" Time,
   PRIMARY KEY ("ReservationID"),
   CONSTRAINT "FK_Reservations_ReservationID"
     FOREIGN KEY ("ReservationID")
       REFERENCES "Customers"("FirstName")
 );
 
-CREATE TABLE "Guests" (
-  "ReservationID" INTEGER,
-  "GuestID" INTEGER,
-  "GuestName" VARCHAR(50),
-  "Phone" <type>,
-  PRIMARY KEY ("GuestID"),
-  CONSTRAINT "FK_Guests_GuestID"
-    FOREIGN KEY ("GuestID")
+CREATE TABLE "Staff" (
+  "TablesID" INTEGER,
+  "StaffID" INTEGER,
+  "StaffName" VARCHAR(50),
+  PRIMARY KEY ("StaffID"),
+  CONSTRAINT "FK_Staff_StaffID"
+    FOREIGN KEY ("StaffID")
       REFERENCES "Reservations"("ReservationID")
-);
-
-CREATE TABLE "Reservation_Tables" (
-  "TableID" INTEGER,
-  "ReservationID" INTEGER
 );
 
 CREATE TABLE "Tables" (
   "TableID" INTEGER,
   "IsActive" BOOLEAN,
   "Capacity" INTEGER,
-  PRIMARY KEY ("TableID")
+  "StaffID" INTEGER,
+  PRIMARY KEY ("TableID"),
+  CONSTRAINT "FK_Tables_IsActive"
+    FOREIGN KEY ("IsActive")
+      REFERENCES "Staff"("StaffName")
 );
 
+CREATE TABLE "ReservationsTables" (
+  "ReservationID" Тип,
+  "TableID" Тип
+);
