@@ -1,7 +1,7 @@
 from random import randint
 
 secret_number = randint(1, 10)
-print(secret_number)
+
 current_number = None
 
 while current_number != secret_number:
